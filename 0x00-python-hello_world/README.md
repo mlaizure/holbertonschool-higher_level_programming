@@ -1,0 +1,14 @@
+- 0: Shell script that runs a Python script
+- 1: Shell script that runs Python code
+- 2: Python script that prints a specific string
+- 3: Python script that prints an int stored in a variable as part of an address
+- 4: Python script that prints a float with a precision of 2 digits
+- 5: Python script that prints 3 times a string stored in variable str followed by its first 9 chars
+- 6: Python script that concatenates and prints 2 strings
+- 7: Python script that slices a string
+- 8: Python script that prints a substring
+- 9: Python script that prints "The Zen of Python" by TimPeters
+- 10: C function that checks if a singly linked list has a cycle in it
+- 11: Python script that prints a string using 'write' function
+- 12: Shell script that compiles a Python script file
+- 13: Python function that does the same thing as some specified Python bytecode
