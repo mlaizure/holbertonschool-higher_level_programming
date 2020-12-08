@@ -9,6 +9,6 @@
 - 8: Python script that prints a substring
 - 9: Python script that prints "The Zen of Python" by TimPeters
 - 10: C function that checks if a singly linked list has a cycle in it
-- 11: Python script that prints a string using 'write' function
-- 12: Shell script that compiles a Python script file
-- 13: Python function that does the same thing as some specified Python bytecode
+- 100: (11) Python script that prints a string using 'write' function
+- 101: (12) Shell script that compiles a Python script file
+- 102: (13) Python function that does the same thing as some specified Python bytecode
