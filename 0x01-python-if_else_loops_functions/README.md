@@ -1,0 +1,17 @@
+- 0: prints whether a random number is positive or negative
+- 1: prints the last digit of a random number
+- 2: prints the ASCII alphabet in lowercase
+- 3: prints the ASCII alphabet in lowercase except q and e
+- 4: prints all the numbers from `0` to `98` in decimal and hexadecimal
+- 5: program that prints numbers from `0` to `99`
+- 6: prints all possible different combinations of two digits
+- 7: function that checks for lowercase characters
+- 8: function that prints a string in uppercase
+- 9: function that prints the last digit of a number
+- 10: function that adds two ints and returns the result
+- 11: funciton that computes `a` to the power of `b` and returns the value
+- 12: Fizz Buzz function
+- 13: C function that inserts a number into a sorted singly linked list
+- 100: (14) program that prints the ASCII alphabet in reverse alternating between lower and uppercase
+- 101: (15) function that creates a copy of the string, removing the character at the position `n`
+- 102: (16) function that does the same thing as some specified Python bytecode
