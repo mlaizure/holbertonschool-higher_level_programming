@@ -1,6 +1,5 @@
 def islower(c):
-    letter = ord(c)
-    if letter >= ord('a') and letter <= ord('z'):
+    if ord(c) >= ord('a') and ord(c) <= ord('z'):
         return True
     else:
         return False
