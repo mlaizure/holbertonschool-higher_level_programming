@@ -1,0 +1,10 @@
+- 0: program that imports the function `def add(a, b):` from the file `add_0.py` and prints the result of the addition `1 + 2 = 3`
+- 1: program that imports functions form the file `calculator_1.py`, does some maths, and prints the result
+- 2: program that prints the number of and the list of its arguments
+- 3: program that prints the result of the addition of all arguments
+- 4: program that prints all the names defined by the compiled module `hidden-4.pyc`
+- 5: program that imports the variable `a` from the file `variable_load_5.py` and prints its value
+- 100: (6) program that imports all functions from the file `calculator_1.py` and handles basic operations
+- 101: (7) program that prints `#pythoniscool` to stdout
+- 102: (8) Python function that does the same thing as some specified bytecode
+- 103: (9) program that prints the alphabet in uppercase
