@@ -1,0 +1,17 @@
+- 0: function that computes the square value of all integers of a matrix
+- 1: function that replaces all occurrences of an element by another in a new list
+- 2: function that adds all unique integers in a list
+- 3: function that returns a set of common elements in two sets
+- 4: function that returns a set of all elements present in only one set
+- 5: function that returns the number of keys in a dictionary
+- 6: function that prints a dictionary by ordered keys
+- 7: function that replaces or adds key/value in a dictionary
+- 8: function that deletes a key in a dictionary
+- 9: function that returns a new dictionary with all values multiplied by 2
+- 10: function that returns a key with the biggest integer value
+- 11: function that returns a list with all values multiplied by a number without using any loops
+- 12: funciton that converts Roman numberal between 1 and 3999 to an integer
+- 100: (13) function that returns the weighted average of all integers tuple
+- 101: (14) function that computes the square value of all integers of a matrix using `map`
+- 102: (15) function that deletes keys with a specific value in a dictionary
+- 103: (16) two C functions that print some basic info about Python lists and Python bytes objects
