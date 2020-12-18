@@ -14,4 +14,3 @@
 - 100: (13) function that returns the weighted average of all integers tuple
 - 101: (14) function that computes the square value of all integers of a matrix using `map`
 - 102: (15) function that deletes keys with a specific value in a dictionary
-- 103: (16) two C functions that print some basic info about Python lists and Python bytes objects
