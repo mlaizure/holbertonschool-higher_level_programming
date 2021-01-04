@@ -1,0 +1,10 @@
+- 0: function that prints `x` elements of a list
+- 1: function that prints an integer with `"{:d}".format()`
+- 2: function that prints the firxt `x` elemtns of a list and only integers
+- 3: function that divides two integers and prints the result
+- 4: function that divides elements by elements two lists
+- 5: function that raises a type exception
+- 6: function that raises a name exception with a message
+- 100: (7) function that prints an integer
+- 101: (8) function that executes a function safely
+- 102: (9) function that does exactly the same as some specified Python bytecode
