@@ -1,0 +1,1 @@
+- 0 - 6: writing a class `Square` that builds on itself based on more complex parameters for each task

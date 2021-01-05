@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-"""This module makes an empty class
-This is all that it does
-"""
+"""Module makes an empty class"""
 
 
 class Square:
-    """An empty class
-    """
+    """Empty class"""
     pass
