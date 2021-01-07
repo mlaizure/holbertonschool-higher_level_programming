@@ -5,5 +5,5 @@
 - 4: function that prints a text with two new lines after each of these characters: `.`, `?`, and `:`
 - 5: Unittests for a function that returns the max int in a list of ints (in test folder)
 
-The test folder contains doctests for each function
+The test folder contains doctests for each function\
 They can be run using `python3 -m doctest ./tests/*`
