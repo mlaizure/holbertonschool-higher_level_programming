@@ -12,4 +12,3 @@
 - 11: function that deletes the item at a specific position in a list
 - 12: function that switches value of `a` and `b`
 - 13: function in C that checks if a singly linked list is a palindrome
-- 100: (14) C function that prints some basic info about Python lists
