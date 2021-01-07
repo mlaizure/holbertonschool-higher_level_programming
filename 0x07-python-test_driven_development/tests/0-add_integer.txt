@@ -1,0 +1,60 @@
+The ``0-add_integer`` module
+======================
+
+Using ``0-add_integer``
+-------------------
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+Now use it:
+
+    >>> add_integer(1)
+    99
+
+    >>> add_integer(1, 2)
+    3
+
+    >>> add_integer(-1, -2)
+    -3
+
+    >>> add_integer(3.4, 3)
+    6
+
+    >>> add_integer(3, 3.9)
+    6
+
+    >>> add_integer(4.3, 5.8)
+    9
+
+    >>> add_integer(12345678912345678901)
+    12345678912345678999
+
+    >>> add_integer()
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer("test", "test")
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(56, "test")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+    >>> add_integer("test", 56)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(None, 57)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(57, None)
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
