@@ -1,0 +1,46 @@
+The ``5-text_indentation`` module
+======================
+
+Using ``5-text_indentation``
+-------------------
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Now use it:
+
+    >>> text_indentation("test")
+    test
+
+    >>> text_indentation("test1.test2?test3:")
+    test1.
+    <BLANKLINE>
+    test2?
+    <BLANKLINE>
+    test3:
+    <BLANKLINE>
+
+    >>> text_indentation("testing1. testing2: testing3?")
+    testing1.
+    <BLANKLINE>
+    testing2:
+    <BLANKLINE>
+    testing3?
+    <BLANKLINE>
+
+    >>> text_indentation(":test1?.")
+    :
+    <BLANKLINE>
+    test1?
+    <BLANKLINE>
+    .
+    <BLANKLINE>
+
+    >>> text_indentation(1234)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
+
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+        ...
+    TypeError: text must be a string
