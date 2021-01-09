@@ -23,4 +23,4 @@ class TestMaxInteger(unittest.TestCase):
     def test_error(self):
         """Tests error raised when invalid input is given"""
         self.assertRaises(Exception, max_integer, ["test", 2, 3])
-        self.assertRaises(Exception, max_integer, [{1}, 2, 3])
+        self.assertRaises(Exception, max_integer, [1, 2, {3}])
