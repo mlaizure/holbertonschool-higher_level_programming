@@ -35,6 +35,13 @@ Now use it:
     .
     <BLANKLINE>
 
+    >>> text_indentation("   test   ")
+    test
+
+    >>> text_indentation("test \n test")
+    test
+    test
+
     >>> text_indentation(1234)
     Traceback (most recent call last):
         ...
