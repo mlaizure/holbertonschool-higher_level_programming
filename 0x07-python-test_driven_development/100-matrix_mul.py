@@ -34,7 +34,7 @@ def matrix_mul(m_a, m_b):
         raise TypeError("each row of m_a must be of the same size")
     if len(set(row_len_mb)) > 1:
         raise TypeError("each row of m_b must be of the same size")
-    if row_len_ma[0] != len(row_len_mb) and row_len_mb[0] != len(row_len_ma):
+    if row_len_ma[0] != len(row_len_mb):
         raise ValueError("m_a and m_b can't be multiplied")
     product = [[sum(a*b for a, b in zip(ma_row, mb_col))
                 for mb_col in zip(*m_b)] for ma_row in m_a]
