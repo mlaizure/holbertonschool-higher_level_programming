@@ -1,0 +1,1 @@
+- 0 - 9: writing a class `Rectangle` that builds on itself based on more complex parameters for each task
