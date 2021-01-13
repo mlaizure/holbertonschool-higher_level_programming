@@ -154,4 +154,11 @@
 - 29: *insert link*
 - 30: function that returns a string n times the number of the iteration
 - 31: class `LockedClass` with no class or object attribute, that prevents the user from dynamically creating new instance attributes, except if the new instance attribute is called `first_name`
-- 32 - 35: Answering some questions about scripts similar to previous tasks, but this time with more description than I'm willing to type out
+- 32:
+```
+a = 1
+b = 1
+```
+Assuming we are using a CPython implementation of Python3 with default options/configuration:\
+How many int objects are created by the execution of the first line of the script? (`103-line1.txt`)\
+How many int objects are created by the execution of the second line of the script (`103-line2.txt`)
