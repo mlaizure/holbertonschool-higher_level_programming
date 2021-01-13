@@ -154,11 +154,43 @@
 - 29: *insert link*
 - 30: function that returns a string n times the number of the iteration
 - 31: class `LockedClass` with no class or object attribute, that prevents the user from dynamically creating new instance attributes, except if the new instance attribute is called `first_name`
-- 32:
+- 32: Assuming we are using a CPython implementation of Python3 with default options/configuration:
 ```
 a = 1
 b = 1
 ```
-Assuming we are using a CPython implementation of Python3 with default options/configuration:\
 How many int objects are created by the execution of the first line of the script? (`103-line1.txt`)\
 How many int objects are created by the execution of the second line of the script (`103-line2.txt`)
+- 33: Assuming we are using a CPython implementation of Python3 with default options/configuration:
+```
+a = 1024
+b = 1024
+del a
+del b
+c = 1024
+```
+How many int objects are created by the execution of the first line of the script? (`104-line1.txt`)\
+How many int objects are created by the execution of the second line of the script (`104-line2.txt`)\
+After the execution of line 3, is the int object pointed by a deleted? Answer with Yes or No (`104-line3.txt`)\
+After the execution of line 4, is the int object pointed by b deleted? Answer with Yes or No (`104-line4.txt`)\
+How many int objects are created by the execution of the last line of the script (`104-line5.txt`)
+- 34: Assuming we are using a CPython implementation of Python3 with default options/configuration:
+```
+print("I")
+print("Love")
+print("Python")
+```
+Before the execution of line 2 (print("Love")), how many int objects have been created and are still in memory? (`105-line1.txt`)
+- 35: Assuming we are using a CPython implementation of Python3 with default options/configuration:
+```
+a = "HBTN"
+b = "HBTN"
+del a
+del b
+c = "HBTN"
+```
+How many string objects are created by the execution of the first line of the script? (`106-line1.txt`)\
+How many string objects are created by the execution of the second line of the script (`106-line2.txt`)\
+After the execution of line 3, is the string object pointed by a deleted? Answer with Yes or No (`106-line3.txt`)\
+After the execution of line 4, is the string object pointed by b deleted? Answer with Yes or No (`106-line4.txt`)\
+How many string objects are created by the execution of the last line of the script (`106-line5.txt`)
