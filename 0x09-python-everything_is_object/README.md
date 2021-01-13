@@ -111,10 +111,10 @@ assign_value(l1, l2)
 print(l1)
 ```
 - 19: function that returns a copy of a list
-- 20: In `a = ()` is `a` a tuple?
-- 21: In `a = (1, 2)` is `a` a tuple?
-- 22: In `a = (1)` is `a` a tuple?
-- 23: In `a = (1, ) is `a` a tuple?
+- 20: `a = ()` Is `a` a tuple?
+- 21: `a = (1, 2)` Is `a` a tuple?
+- 22: `a = (1)` Is `a` a tuple?
+- 23: `a = (1, )` Is `a` a tuple?
 - 24: What does this script print?
 ```
 a = (1)
