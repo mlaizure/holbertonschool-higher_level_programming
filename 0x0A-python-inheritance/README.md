@@ -1,0 +1,8 @@
+- 0: function that returns the list of available attributes and methods of an object
+- 1: class `MyList` that inherits from `list`
+- 2: function that returns `True` if the object is exactly an instance of the specified class, otherwise `False`
+- 3: function that returns `True` if the object is an instance of, or if the object is an instance of a class that inherited from, the specified class; otherwise `False`
+- 4: function that returns `True` if the object is an instance of a class that inherited (directly or indirectly) from the specified class; otherwise `False`
+- 5 - 11: class `BaseGeometry` with subclasses `Rectangle` (8 - 9) and `Square` (10 - 11) which also inherits from `Rectangle`
+- 100: (12) class `MyInt` that inherits from `int` and inverts `==` and `=!` operators
+- 101: (13) function that adds a new attribute to an object if it's possible
