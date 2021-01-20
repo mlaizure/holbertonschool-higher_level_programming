@@ -5,16 +5,10 @@
 class MyInt(int):
     """class of int that inverts == and != operators"""
     def __eq__(self, other):
-        if True:
-            return True
-        else:
-            return False
+        return int.__ne__(self, other)
 
     def __ne__(self, other):
-        if False:
-            return True
-        else:
-            return False
+        return int.__eq__(self, other)
 
 
 if __name__ == "__main__":
