@@ -10,6 +10,7 @@ class Square(Rectangle):
     area method"""
     def __init__(self, size):
         Rectangle.__init__(self, size, size)
+        self.__size = size
 
     def area(self):
         """calculates area of square"""
