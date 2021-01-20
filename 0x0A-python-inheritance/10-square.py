@@ -13,9 +13,9 @@ class Square(Rectangle):
         Rectangle.__init__(self, size, size)
         self.__size = size
 
-    def area(self):
-        """calculates area of square"""
-        return Rectangle.area(self)
+#    def area(self):
+#        """calculates area of square"""
+#        return Rectangle.area(self)
 
 
 if __name__ == "__main__":
