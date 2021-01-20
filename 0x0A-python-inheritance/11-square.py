@@ -9,6 +9,7 @@ class Square(Rectangle):
     """instantiates with size validated by int validator in BaseGeometry and
     area and str method"""
     def __init__(self, size):
+        self.integer_validator("size", size)
         Rectangle.__init__(self, size, size)
         self.__size = size
 
