@@ -13,13 +13,13 @@ class Square(Rectangle):
         Rectangle.__init__(self, size, size)
         self.__size = size
 
-    def area(self):
-        """calculates area of square"""
-        return Rectangle.area(self)
+#    def area(self):
+#       """calculates area of square"""
+#        return Rectangle.area(self)
 
-    def __str__(self):
-        """returns formatted string to print"""
-        return Rectangle.__str__(self)
+#    def __str__(self):
+#        """returns formatted string to print"""
+#        return Rectangle.__str__(self)
 
 
 if __name__ == "__main__":
