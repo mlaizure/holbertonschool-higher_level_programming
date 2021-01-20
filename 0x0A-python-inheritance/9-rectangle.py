@@ -1,19 +1,7 @@
 #!/usr/bin/python3
 """Module with a class Rectangle that inherits from class BaseGeometry"""
 
-
-class BaseGeometry:
-    """public methods area and int validator"""
-    def area(self):
-        """area() is not implemented"""
-        raise Exception("area() is not implemented")
-
-    def integer_validator(self, name, value):
-        """makes sure value is an int and greater than zero"""
-        if type(value) != int:
-            raise TypeError(name + " must be an integer")
-        if value <= 0:
-            raise ValueError(name + " must be greater than 0")
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 
 class Rectangle(BaseGeometry):
