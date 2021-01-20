@@ -36,6 +36,16 @@ Now use it:
         ...
     TypeError: test must be an integer
 
+    >>> bg.integer_validator("test", (1, 2))
+    Traceback (most recent call last):
+        ...
+    TypeError: test must be an integer
+
+    >>> bg.integer_validator("test", {"1": 2})
+    Traceback (most recent call last):
+        ...
+    TypeError: test must be an integer
+
     >>> bg.integer_validator("width", 0)
     Traceback (most recent call last):
         ...
