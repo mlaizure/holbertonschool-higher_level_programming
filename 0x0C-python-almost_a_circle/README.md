@@ -1,0 +1,14 @@
+A project to review and learn some Python concepts:
+- Import
+- Exceptions
+- Class
+- Private attribute
+- Getter and Setter
+- Class method
+- Static method
+- Inheritance
+- Unittest
+- Read and Write file
+- `args` and `kwargs`
+- Serialization and Deserialization
+- JSON
