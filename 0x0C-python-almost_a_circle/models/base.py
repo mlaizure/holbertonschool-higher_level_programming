@@ -4,7 +4,8 @@ import json
 
 
 class Base:
-    """manage id attribute, json encoding for subclasses"""
+    """manage id attribute, json encoding and decoding for subclasses
+    loading to and from file for subclasses, create instance from dict"""
     __nb_objects = 0
 
     def __init__(self, id=None):
@@ -24,11 +25,9 @@ class Base:
     def save_to_file(cls, list_objs):
         """writes the JSON string representation of list_objs to a file"""
         filename = "{}.json".format(cls.__name__)
-        list_dicts = []
-        for obj in list_objs:
-            list_dicts.append(cls.to_dictionary(obj))
         with open(filename, mode='w', encoding='utf-8') as f:
-            f.write(cls.to_json_string(list_dicts))
+            f.write(cls.to_json_string([cls.to_dictionary(obj) for obj
+                                        in list_objs]))
 
     @staticmethod
     def from_json_string(json_string):

@@ -4,7 +4,8 @@ from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """all attributes from Rectangle"""
+    """all attributes from Rectangle, can initialize, stringify, update, and
+    dictionarify itself"""
     def __init__(self, size, x=0, y=0, id=None):
         """initializes attributes of square instance"""
         Rectangle.__init__(self, size, size, x, y, id)
@@ -38,5 +39,5 @@ class Square(Rectangle):
                 setattr(self, key, value)
 
     def to_dictionary(self):
-        """returns dictionary representation of a Rectangle"""
+        """returns dictionary representation of a Square"""
         return {'id': self.id, 'size': self.width, 'x': self.x, 'y': self.y}

@@ -4,7 +4,8 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Private attributes width, height, x, and y"""
+    """Private attributes width, height, x, and y, can calculate area,
+    stringify, update, dictionarify, and display itself"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """inititalizes class attributes"""
         self.width = width
