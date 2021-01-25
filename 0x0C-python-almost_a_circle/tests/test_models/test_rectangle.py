@@ -48,6 +48,8 @@ class TestRectangle(unittest.TestCase):
             Rectangle((5, 5), 6, 7, 8, 9)
         with self.assertRaises(TypeError):
             Rectangle(5, {6}, 7, 8, 9)
+        with self.assertRaises(TypeError):
+            Rectangle(5, 6, True, 8, 9)
 
         with self.assertRaises(ValueError):
             Rectangle(5, 6, -1, 8, 9)
