@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module with unittests for Rectangle class"""
+"""Module with unittests for Square class"""
 import unittest
 import pep8
 from models.square import Square
