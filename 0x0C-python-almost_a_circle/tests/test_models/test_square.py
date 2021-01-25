@@ -120,7 +120,6 @@ class TestSquare(unittest.TestCase):
         self.assertEqual(squ_1.y, 6)
         self.assertEqual(squ_1.id, 98)
 
-
     def test_to_dictionary(self):
         """tests to_dictionary method"""
         squ_1 = Square(1, 2, 3, 99)
