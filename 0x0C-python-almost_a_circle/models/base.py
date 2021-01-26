@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Module with base class"""
 import json
+import csv
 
 
 class Base:
@@ -55,7 +56,37 @@ class Base:
         try:
             with open(filename, mode='r', encoding='utf-8') as f:
                 json_str = f.read()
-        except:
+        except FileNotFoundError:
             return []
         return [cls.create(**a_dict) for a_dict in
                 cls.from_json_string(json_str)]
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        """writes csv string representation of list_objs to file"""
+        filename = "{}.csv".format(cls.__name__)
+        if not list_objs:
+            list_objs = []
+        with open(filename, mode='w', encoding='utf-8') as f:
+            if cls.__name__ == "Rectangle":
+                fieldnames = ['id', 'width', 'height', 'x', 'y']
+            elif cls.__name__ == "Square":
+                fieldnames = ['id', 'size', 'x', 'y']
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writerows([obj.to_dictionary() for obj in list_objs])
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """returns a list of instances from a csv file"""
+        filename = "{}.csv".format(cls.__name__)
+        try:
+            with open(filename, mode='r', encoding='utf-8') as f:
+                if cls.__name__ == "Rectangle":
+                    fieldnames = ['id', 'width', 'height', 'x', 'y']
+                elif cls.__name__ == "Square":
+                    fieldnames = ['id', 'size', 'x', 'y']
+                reader = csv.DictReader(f, fieldnames=fieldnames)
+                return [cls.create(**{key: int(value) for key, value
+                                      in a_dict.items()}) for a_dict in reader]
+        except FileNotFoundError:
+            return []
