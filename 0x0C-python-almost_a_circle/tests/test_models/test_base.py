@@ -38,23 +38,23 @@ class TestBase(unittest.TestCase):
         """tests save_to_file method"""
         l_objs = None
         Base.save_to_file(l_objs)
-        with open("Base.json", mode='r') as f:
+        with open("Base.json", mode='r', encoding='utf-8') as f:
             self.assertEqual(f.read(), Base.to_json_string(l_objs))
 
         l_objs = []
         Base.save_to_file(l_objs)
-        with open("Base.json", mode='r') as f:
+        with open("Base.json", mode='r', encoding='utf-8') as f:
             self.assertEqual(f.read(), Base.to_json_string(l_objs))
 
         l_objs = [Rectangle(1, 2, 3, 4, 99)]
         Base.save_to_file(l_objs)
-        with open("Base.json", mode='r') as f:
+        with open("Base.json", mode='r', encoding='utf-8') as f:
             self.assertEqual(f.read(),
                              Base.to_json_string([l_objs[0].to_dictionary()]))
 
         l_objs = [Square(1), Square(2)]
         Base.save_to_file(l_objs)
-        with open("Base.json", mode='r') as f:
+        with open("Base.json", mode='r', encoding='utf-8') as f:
             self.assertEqual(f.read(),
                              Base.to_json_string([l_objs[0].to_dictionary(),
                                                   l_objs[1].to_dictionary()]))
@@ -95,6 +95,51 @@ class TestBase(unittest.TestCase):
         list_squ = [Square(1), Square(2, 3, 4, 99)]
         Square.save_to_file(list_squ)
         list_from = Square.load_from_file()
+        self.assertEqual(type(list_from), list)
+        self.assertEqual(list_from[0].size, list_squ[0].size)
+        self.assertEqual(list_from[0].width, list_squ[0].width)
+        self.assertEqual(list_from[0].height, list_squ[0].height)
+        self.assertEqual(list_from[0].x, list_squ[0].x)
+        self.assertEqual(list_from[0].y, list_squ[0].y)
+        self.assertEqual(list_from[0].id, list_squ[0].id)
+        self.assertEqual(list_from[1].size, list_squ[1].size)
+        self.assertEqual(list_from[1].width, list_squ[1].width)
+        self.assertEqual(list_from[1].height, list_squ[1].height)
+        self.assertEqual(list_from[1].x, list_squ[1].x)
+        self.assertEqual(list_from[1].y, list_squ[1].y)
+        self.assertEqual(list_from[1].id, list_squ[1].id)
+
+    def test_save_to_file_csv(self):
+        """tests save_to_file_csv method"""
+        l_objs = None
+        Rectangle.save_to_file_csv(l_objs)
+        with open("Rectangle.csv", mode='r', encoding='utf-8') as f:
+            self.assertEqual(f.read(), "")
+
+        l_objs = []
+        Square.save_to_file_csv(l_objs)
+        with open("Square.csv", mode='r', encoding='utf-8') as f:
+            self.assertEqual(f.read(), "")
+
+        l_objs = [Rectangle(1, 2, 3, 4, 99)]
+        Rectangle.save_to_file_csv(l_objs)
+        with open("Rectangle.csv", mode='r', encoding='utf-8') as f:
+            self.assertEqual(f.read(), "99,1,2,3,4\n")
+
+        l_objs = [Square(1, 0, 0, 1), Square(2, 0, 0, 2)]
+        Square.save_to_file_csv(l_objs)
+        with open("Square.csv", mode='r', encoding='utf-8') as f:
+            self.assertEqual(f.read(), "1,1,0,0\n2,2,0,0\n")
+
+    def test_load_from_file_csv(self):
+        """tests load_from_file_csv method"""
+        if os.path.exists("Rectangle.csv"):
+            os.remove("Rectangle.csv")
+        self.assertEqual(Rectangle.load_from_file_csv(), [])
+
+        list_squ = [Square(1), Square(2, 3, 4, 99)]
+        Square.save_to_file_csv(list_squ)
+        list_from = Square.load_from_file_csv()
         self.assertEqual(type(list_from), list)
         self.assertEqual(list_from[0].size, list_squ[0].size)
         self.assertEqual(list_from[0].width, list_squ[0].width)
