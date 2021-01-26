@@ -7,6 +7,12 @@ from models.rectangle import Rectangle
 
 class TestRectangle(unittest.TestCase):
     """tests for Rectangle class"""
+    def test_pep8(self):
+        """tests pep8 validation"""
+        pep8style = pep8.StyleGuide(quiet=True)
+        res = pep8style.check_files(['models/rectangle.py'])
+        self.assertEqual(res.total_errors, 0)
+
     def test_init(self):
         """tests rectangle initialization"""
         rec_1 = Rectangle(1, 2)
@@ -125,9 +131,3 @@ class TestRectangle(unittest.TestCase):
         rec_1 = Rectangle(1, 2, 3, 4, 99)
         self.assertEqual(rec_1.to_dictionary(), {'id': 99, 'width': 1,
                                                  'height': 2, 'x': 3, 'y': 4})
-
-    def test_pep8(self):
-        """tests pep8 validation"""
-        pep8style = pep8.StyleGuide(quiet=True)
-        res = pep8style.check_files(['models/rectangle.py'])
-        self.assertEqual(res.total_errors, 0)

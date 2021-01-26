@@ -10,6 +10,12 @@ from models.square import Square
 
 class TestBase(unittest.TestCase):
     """tests for Base class"""
+    def test_pep8(self):
+        """tests pep8 validation"""
+        pep8style = pep8.StyleGuide(quiet=True)
+        res = pep8style.check_files(['models/base.py'])
+        self.assertEqual(res.total_errors, 0)
+
     def test_init(self):
         """tests initialization method for Base class"""
         base = Base()

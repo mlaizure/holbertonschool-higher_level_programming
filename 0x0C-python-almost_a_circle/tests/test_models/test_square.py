@@ -7,6 +7,12 @@ from models.square import Square
 
 class TestSquare(unittest.TestCase):
     """tests for Square class"""
+    def test_pep8(self):
+        """tests pep8 validation"""
+        pep8style = pep8.StyleGuide(quiet=True)
+        res = pep8style.check_files(['models/square.py'])
+        self.assertEqual(res.total_errors, 0)
+
     def test_init(self):
         """tests square initialization"""
         squ_1 = Square(1)
@@ -127,9 +133,3 @@ class TestSquare(unittest.TestCase):
         squ_1 = Square(1, 2, 3, 99)
         self.assertEqual(squ_1.to_dictionary(), {'id': 99, 'size': 1,
                                                  'x': 2, 'y': 3})
-
-    def test_pep8(self):
-        """tests pep8 validation"""
-        pep8style = pep8.StyleGuide(quiet=True)
-        res = pep8style.check_files(['models/square.py'])
-        self.assertEqual(res.total_errors, 0)
