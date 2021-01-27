@@ -36,23 +36,6 @@ class TestBase(unittest.TestCase):
 
     def test_save_to_file(self):
         """tests save_to_file method"""
-#        l_objs = None
-#        Rectangle.save_to_file(l_objs)
-#        with open("Rectangle.json", mode='r', encoding='utf-8') as f:
-#            self.assertEqual(f.read(), Rectangle.to_json_string(l_objs))
-
-#        l_objs = []
-#        Rectangle.save_to_file(l_objs)
-#        with open("Rectangle.json", mode='r', encoding='utf-8') as f:
-#            self.assertEqual(f.read(), Rectangle.to_json_string(l_objs))
-
-#        l_objs = [Rectangle(1, 2, 3, 4, 99)]
-#        Rectangle.save_to_file(l_objs)
-#        dict_objs = l_objs[0].to_dictionary()
-#        with open("Rectangle.json", mode='r', encoding='utf-8') as f:
-#            self.assertEqual(f.read(),
-#                             Rectangle.to_json_string([dict_objs]))
-
         l_objs = None
         Square.save_to_file(l_objs)
         with open("Square.json", mode='r', encoding='utf-8') as f:
