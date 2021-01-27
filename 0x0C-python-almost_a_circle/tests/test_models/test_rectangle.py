@@ -2,6 +2,7 @@
 """Module with unittests for Rectangle class"""
 import unittest
 import pep8
+from contextlib import redirect_stdout
 from models.rectangle import Rectangle
 
 
@@ -76,6 +77,29 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rec_1.area(), 1)
         rec_42 = Rectangle(6, 7)
         self.assertEqual(rec_42.area(), 42)
+
+    def test_display(self):
+        """tests display method"""
+        r1 = Rectangle(2, 2)
+        with open("test.txt", mode='w', encoding='utf-8') as f:
+            with redirect_stdout(f):
+                r1.display()
+        with open("test.txt", mode='r', encoding='utf-8') as f:
+            self.assertEqual(f.read(), "##\n##\n")
+
+        r1 = Rectangle(2, 2, 2)
+        with open("test.txt", mode='w', encoding='utf-8') as f:
+            with redirect_stdout(f):
+                r1.display()
+        with open("test.txt", mode='r', encoding='utf-8') as f:
+            self.assertEqual(f.read(), "  ##\n  ##\n")
+
+        r1 = Rectangle(2, 2, 2, 2)
+        with open("test.txt", mode='w', encoding='utf-8') as f:
+            with redirect_stdout(f):
+                r1.display()
+        with open("test.txt", mode='r', encoding='utf-8') as f:
+            self.assertEqual(f.read(), "\n\n  ##\n  ##\n")
 
     def test_str(self):
         """tests __str__ method"""
