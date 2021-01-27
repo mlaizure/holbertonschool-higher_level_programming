@@ -53,12 +53,30 @@ class TestBase(unittest.TestCase):
             self.assertEqual(f.read(),
                              Rectangle.to_json_string([dict_objs]))
 
+        l_objs = None
+        Square.save_to_file(l_objs)
+        with open("Square.json", mode='r', encoding='utf-8') as f:
+            self.assertEqual(f.read(), Square.to_json_string(l_objs))
+
+        l_objs = []
+        Square.save_to_file(l_objs)
+        with open("Square.json", mode='r', encoding='utf-8') as f:
+            self.assertEqual(f.read(), Square.to_json_string(l_objs))
+
+        l_objs = [Square(1, 2, 3, 99)]
+        Square.save_to_file(l_objs)
+        dict_objs = l_objs[0].to_dictionary()
+        with open("Square.json", mode='r', encoding='utf-8') as f:
+            self.assertEqual(f.read(),
+                             Square.to_json_string([dict_objs]))
+
         l_objs = [Square(1), Square(2)]
         Square.save_to_file(l_objs)
+        dict_objs1 = l_objs[1].to_dictionary()
         with open("Square.json", mode='r', encoding='utf-8') as f:
             self.assertEqual(f.read(),
                              Square.to_json_string([l_objs[0].to_dictionary(),
-                                                  l_objs[1].to_dictionary()]))
+                                                    dict_objs1]))
 
     def test_from_json_string(self):
         """tests from_json_string method"""
