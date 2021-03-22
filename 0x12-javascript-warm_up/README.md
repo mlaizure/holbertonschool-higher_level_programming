@@ -1,0 +1,14 @@
+- 0: script that prints "JavaScript is amazing"
+- 1: scirpt that prints 3 lines
+- 2: script that prints a message depending on the number of args passed
+- 3: script that prints the first argument passed to it
+- 4: script that prints 2 args passed to it in a specified format
+- 5: script that prints a message if hte first arg can be converted to an int
+- 6: script that prints 3 lines by using a loop
+- 7: script that prints x times "C is fun"
+- 8: script that prints a square
+- 9: script that prints the addition of 2 ints
+- 10: script that computes and prints a factorial
+- 11: script that searches the second biggest int in the list of args
+- 12: script replaces variable value 12 with 89
+- 13: function that returns the addition of 2 ints
