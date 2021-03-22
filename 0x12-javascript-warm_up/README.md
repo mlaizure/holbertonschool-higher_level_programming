@@ -12,3 +12,7 @@
 - 11: script that searches the second biggest int in the list of args
 - 12: script replaces variable value 12 with 89
 - 13: function that returns the addition of 2 ints
+- 100 (14): modifies value of a variable from another file
+- 101 (15): function that executes `x` times a function
+- 102 (16): function that increments and calls a function
+- 103 (17): script that adds a new function `incr` that increments the int `value`
