@@ -24,3 +24,5 @@ if __name__ == "__main__":
         State.id.asc())
     for state in a_states:
         print("{}: {}".format(state.id, state.name))
+
+    session.close()

@@ -1,9 +1,10 @@
 #!/usr/bin/python3
-"""adds the State obj "Louisiana" to the database hbtn_0e_6_usa"""
+"""prints all City objects from database hbtn_0e_14_usa"""
 
 if __name__ == "__main__":
     import sys
     from model_state import Base, State
+    from model_city import City
     from sqlalchemy import (create_engine)
     from sqlalchemy.orm import sessionmaker
 
@@ -19,9 +20,9 @@ if __name__ == "__main__":
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    new_state = State(name='Louisiana')
-    session.add(new_state)
-    session.commit()
-    print(new_state.id)
+    cities = session.query(City, State).filter(
+        City.state_id == State.id).order_by(City.id.asc())
+    for city, state in cities:
+        print("{}: ({}) {}".format(state.name, city.id, city.name))
 
     session.close()
