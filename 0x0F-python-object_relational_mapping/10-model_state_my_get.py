@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""lists all State objects that contain 'a' from the database
+"""lists the State object with name passed as an arg from the database
 hbtn_0e_6_usa"""
 
 if __name__ == "__main__":
