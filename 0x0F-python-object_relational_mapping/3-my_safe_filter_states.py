@@ -14,7 +14,7 @@ if __name__ == "__main__":
                          passwd=password, db=database_name, charset="utf8")
     cur = db.cursor()
     cur.execute("""SELECT * FROM states WHERE name = %s
-    ORDER BY id ASC""",(state_searched,))
+    ORDER BY id ASC""", (state_searched,))
     query_rows = cur.fetchall()
     for row in query_rows:
         print(row)
