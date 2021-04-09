@@ -5,7 +5,6 @@ if __name__ == "__main__":
 
     with request.urlopen('https://intranet.hbtn.io/status') as f:
         content = f.read()
-        print(f.headers)
         print("Body response:")
         print("\t- type: {}".format(type(content)))
         print("\t- content: {}".format(content))
