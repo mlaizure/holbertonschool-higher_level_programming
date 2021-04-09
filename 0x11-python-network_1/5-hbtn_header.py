@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+"""sends request to URL and displays value of X-Request-Id"""
+if __name__ == "__main__":
+    import requests
+    from sys import argv
+
+    r = requests.get('https://intranet.hbtn.io/status')
+    print("{}".format(r.headers['X-Request-Id']))
